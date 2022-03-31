@@ -1,7 +1,7 @@
 name: Docusaurus Build
 
 on: [push, pull_request]
-  push:
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -10,7 +10,7 @@ jobs:
         node-version: [17]
     steps:
     - uses: actions/checkout@v2
-    - uses: pnpm/action-setup@v2.0.1
+    - uses: pnpm/action-setup@v2
       with:
         version: latest
     - name: Use Node.js ${{ matrix.node-version }}
